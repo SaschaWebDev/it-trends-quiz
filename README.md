@@ -2,7 +2,9 @@
 
 A small quiz web app created for a university project.
 
-[Live Demo](https://it-trends-quiz.vercel.app "Live Demo") https://it-trends-quiz.vercel.app
+[Live Demo https://it-trends-quiz.vercel.app](https://it-trends-quiz.vercel.app "Live Demo https://it-trends-quiz.vercel.app")
+
+![Alt Text](preview.gif)
 
 ### Features:
 
