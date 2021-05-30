@@ -4,7 +4,7 @@ const SocialSection = () => {
   return (
     <div className="flex flex-row-reverse opacity-50">
       <a
-        href="https://github.com/SaschaWebDev"
+        href="https://github.com/SaschaWebDev/it-trends-quiz"
         target="_blank"
         rel="noopener noreferrer"
       >
