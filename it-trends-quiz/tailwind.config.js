@@ -18,6 +18,9 @@ module.exports = {
           dark: "#0b0e11",
         },
       },
+      screens: {
+        xs: { max: "400px" },
+      },
     },
   },
   variants: {

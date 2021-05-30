@@ -14,14 +14,14 @@ const questions = [
         isCorrect: true,
       },
       {
-        answerText: "Sichere Kleinanzeigen-Plattform von Twitter",
+        answerText: "Eine sichere Kleinanzeigen-Plattform von Twitter",
         isCorrect: false,
       },
     ],
   },
   {
     questionText:
-      "In welchen Bereich des Gartner Hype Cycle wird Privacy eingestuft?",
+      "In welcher der vier Phasen des Gartner Hype Cycle befindet sich der Bereich Privacy?",
     extraInfo:
       "Der Bereich der Privatsphäre wird als “on the Rise” eingestuft und befindet sich damit noch vor dem Höhepunkt der überhöhten Erwartungen. Es ist daher anzunehmen, dass sich dieser Sektor noch weiter vergrößern und die Erwartungen sowie die Investitionen und der Fortschritt in diesem Bereich über die nächsten Jahre wachsen wird.",
     answerOptions: [
@@ -45,41 +45,41 @@ const questions = [
   },
   {
     questionText:
-      "Die Folgen von verlorener Sicherheit und Privatsphäre sind ...",
+      "Daten der Privatsphäre in Gegenüberstellung: Die Folgen von verlorener Sicherheit und Privatsphäre sind ...",
     extraInfo:
       "Ein Anbieter kann Zugangsdaten neu vergeben und somit die Sicherheit wiederherstellen. Bei einem Verlust an Daten im Bereich der Privatsphäre sind die Auswirkungen dazu diametral. Auch wenn ein Anbieter die Zugangsdaten dem rechtmäßigen Besitzer zurückgibt, bleiben die entwendeten persönlichen Daten, wie Geburtsdaten, Kontoverbindungen, E-Mail-Adressen oder intime Chatverläufe unumkehrbar für immer in freier Wildbahn.",
     answerOptions: [
-      { answerText: "gleich und beide wiederherstellbar", isCorrect: false },
+      { answerText: "gleich und beide wiederherstellbar.", isCorrect: false },
       {
-        answerText: "verschieden und beide wiederherstellbar",
+        answerText: "verschieden und beide wiederherstellbar.",
         isCorrect: false,
       },
       {
-        answerText: "gleich und nicht beide wiederherstellbar",
+        answerText: "gleich und nicht beide wiederherstellbar.",
         isCorrect: false,
       },
       {
-        answerText: "verschieden und nicht beide wiederherstellbar",
+        answerText: "verschieden und nicht beide wiederherstellbar.",
         isCorrect: true,
       },
     ],
   },
   {
-    questionText: "Sicherheit schützt Daten ...",
+    questionText: "Sicherheit schützt...",
     extraInfo:
       "Sicherheit schützt Daten jeglicher Art, worunter auch persönliche Daten gehören.",
     answerOptions: [
-      { answerText: "nur von Unternehmen", isCorrect: false },
+      { answerText: "nur Daten von Unternehmen.", isCorrect: false },
       {
-        answerText: "nur von Privatpersonen",
+        answerText: "nur Daten von Privatpersonen.",
         isCorrect: false,
       },
       {
-        answerText: "auch persönliche Daten",
+        answerText: "auch persönliche Daten.",
         isCorrect: true,
       },
       {
-        answerText: "nur persönliche Daten",
+        answerText: "nur persönliche Daten.",
         isCorrect: false,
       },
     ],
@@ -89,17 +89,17 @@ const questions = [
     extraInfo:
       "Sicherheitsdaten wie Accountzugänge oder private Schlüssel können durch Administratoren und Hersteller neu vergeben werden.",
     answerOptions: [
-      { answerText: "zurücksetzbar", isCorrect: true },
+      { answerText: "zurücksetzbar.", isCorrect: true },
       {
-        answerText: "nicht zurücksetzbar",
+        answerText: "nicht zurücksetzbar.",
         isCorrect: false,
       },
       {
-        answerText: "lebenslang identifizierend",
+        answerText: "lebenslang identifizierend.",
         isCorrect: false,
       },
       {
-        answerText: "zum löschen da",
+        answerText: "zum Löschen da.",
         isCorrect: false,
       },
     ],
@@ -109,24 +109,24 @@ const questions = [
     extraInfo:
       "Persönliche Daten der Privatsphäre wie Geburtsdaten, biographische Informationen oder Chatverläufe lassen sich, einmal verloren, lebenslang mit jemanden in Verbindung bringen.",
     answerOptions: [
-      { answerText: "zurücksetzbar", isCorrect: false },
+      { answerText: "zurücksetzbar.", isCorrect: false },
       {
-        answerText: "allgemein öffentlich",
+        answerText: "stets öffentlich.",
         isCorrect: false,
       },
       {
-        answerText: "lebenslang identifizierend",
+        answerText: "lebenslang identifizierend.",
         isCorrect: true,
       },
       {
-        answerText: "zum löschen da",
+        answerText: "zum löschen da.",
         isCorrect: false,
       },
     ],
   },
   {
     questionText:
-      "Die Leuphana wird gehackt, alle Noten abgegriffen und veröffentlicht. Welche Bereiche wurden verletzt?",
+      "Die Leuphana wird gehackt, alle Noten mit Namen abgegriffen und veröffentlicht. Welche Bereiche wurden verletzt?",
     extraInfo:
       "Zum einen wurden Sicherheitsmechanismen und sensible Zugangsdaten der Universität komprimiert, so dass die Sicherheit verletzt wurde, aber es wurden auch persönliche Informationen der Noten entwendet, welches die Privatsphäre verletzt.",
     answerOptions: [
@@ -172,19 +172,19 @@ const questions = [
       "Privatsphäre ist ein fundamentales Recht eines jeden Menschens und die lebenslangen Konsequzenzen beim Verlust persönlicher Daten übertreffen oftmals die Einschätzbarkeit des Individuums.",
     answerOptions: [
       {
-        answerText: "vernachlässigbar, wenn man nichts zu verbergen hat",
+        answerText: "vernachlässigbar, wenn man nichts zu verbergen hat.",
         isCorrect: false,
       },
       {
-        answerText: "Sache des Individuums",
+        answerText: "Sache des Individuums.",
         isCorrect: false,
       },
       {
-        answerText: "ein demokratischer Grundsatz",
+        answerText: "ein demokratischer Grundsatz.",
         isCorrect: true,
       },
       {
-        answerText: "nicht möglich",
+        answerText: "nicht möglich.",
         isCorrect: false,
       },
     ],
@@ -214,7 +214,7 @@ const questions = [
   },
   {
     questionText:
-      "Schaffen es große Tech-Konzerne Privatsphäre der Nutzer zu wahren?",
+      "Schaffen es große Tech-Konzerne die Privatsphäre der Nutzer zu wahren?",
     extraInfo:
       "Alleine im März diesen Jahres wurden Datensätze von über einer halben Milliarde Personen veröffentlicht. Diese umfassten E-Mail-Adressen, Anschriften, biografischen Informationen und Telefonnummern und wurden von der Plattform Facebook entwendet. Die meisten anderen großen Plattformen haben bereits Kundendaten verloren.",
     answerOptions: [

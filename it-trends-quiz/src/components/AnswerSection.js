@@ -9,22 +9,25 @@ const AnswerSection = (props) => {
       </span>
       <div className="answer-section flex flex-col gap-4 max-w-lg">
         {questions.map((question, index) => (
-          <div className="pt-10">
+          <div key={index} className="pt-10">
             <span
-              key={index}
+              key={"span-" + index}
               className="text-lg text-primary-100 font-bold mb-4 text-left select-none"
             >
               {index + 1}. {question.questionText}
             </span>
-            <div className="text-md text-primary-100 font-md select-none py-2 text-left">
+            <div
+              key={"div-" + index}
+              className="text-md text-primary-100 font-md select-none py-2 text-left"
+            >
               {question.extraInfo}
             </div>
-            {question.answerOptions.map((answer, index) => (
+            {question.answerOptions.map((answer, indexAnswer) => (
               <div
                 className={`${
                   answer.isCorrect ? "bg-green-700" : "bg-red-500 opacity-50"
                 } flex outline-none px-6 rounded-lg text-button  disabled:text-primary-300 font-bold items-center justify-center text-base py-3 mt-2 select-none max-w-lg`}
-                key={index}
+                key={indexAnswer}
               >
                 {answer.answerText}
               </div>
