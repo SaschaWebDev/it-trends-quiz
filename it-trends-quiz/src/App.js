@@ -17,6 +17,7 @@ export default function App() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [timer, setTimer] = useState(totalTime);
+  const [shuffleSeed, setShuffleSeed] = useState(0.5 - Math.random());
 
   const handleAnswerOptionClick = (isCorrect) => {
     if (isCorrect) {
@@ -78,6 +79,7 @@ export default function App() {
             currentQuestion={currentQuestion}
             questions={questions}
             timer={timer}
+            shuffleSeed={shuffleSeed}
             handleCallBackAnswerOptionClick={handleAnswerOptionClick}
           />
         )}
