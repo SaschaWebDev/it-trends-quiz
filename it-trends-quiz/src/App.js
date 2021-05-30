@@ -53,6 +53,10 @@ export default function App() {
     }
   });
 
+  useEffect(() => {
+    setShuffleSeed(0.5 - Math.random());
+  }, []);
+
   return (
     <div>
       <div className="flex m-auto flex-col p-6 gap-5 bg-primary-800 rounded-lg z-10 sm:w-400 w-full mb-4">
