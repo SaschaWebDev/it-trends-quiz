@@ -6,15 +6,17 @@ import QuizSection from "./components/QuizSection";
 import ScoreSection from "./components/ScoreSection";
 import AnswerSection from "./components/AnswerSection";
 import SocialSection from "./components/SocialSection";
+import TimesUpSection from "./components/TimesUpSection";
 
 export default function App() {
+  const totalTime = 600;
   const [quizStarted, setQuizStarted] = useState(false);
   const [showScore, setShowScore] = useState(false);
   const [showAnswers, setShowAnswers] = useState(false);
 
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
-  const [timer, setTimer] = useState(600);
+  const [timer, setTimer] = useState(totalTime);
 
   const handleAnswerOptionClick = (isCorrect) => {
     if (isCorrect) {
@@ -39,7 +41,7 @@ export default function App() {
     setShowAnswers(false);
     setCurrentQuestion(0);
     setScore(0);
-    setTimer(600);
+    setTimer(totalTime);
   };
 
   useEffect(() => {
@@ -53,7 +55,9 @@ export default function App() {
   return (
     <div>
       <div className="flex m-auto flex-col p-6 gap-5 bg-primary-800 rounded-lg z-10 sm:w-400 w-full mb-4">
-        {showAnswers ? (
+        {timer === 0 ? (
+          <TimesUpSection handleCallBackRestartQuiz={handleRestartQuiz} />
+        ) : showAnswers ? (
           <AnswerSection
             questions={questions}
             handleCallBackRestartQuiz={handleRestartQuiz}
@@ -64,7 +68,7 @@ export default function App() {
           <ScoreSection
             score={score}
             timer={timer}
-            totalTime={600}
+            totalTime={totalTime}
             questionLength={questions.length}
             handleCallBackShowAnswers={setShowAnswers}
             handleCallBackRestartQuiz={handleRestartQuiz}
