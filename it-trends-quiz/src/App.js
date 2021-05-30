@@ -5,6 +5,7 @@ import IntroSection from "./components/IntroSection";
 import QuizSection from "./components/QuizSection";
 import ScoreSection from "./components/ScoreSection";
 import AnswerSection from "./components/AnswerSection";
+import SocialSection from "./components/SocialSection";
 
 export default function App() {
   const [quizStarted, setQuizStarted] = useState(false);
@@ -50,31 +51,34 @@ export default function App() {
   });
 
   return (
-    <div className="flex m-auto flex-col p-6 gap-5 bg-primary-800 rounded-lg z-10 sm:w-400 w-full mb-4">
-      {showAnswers ? (
-        <AnswerSection
-          questions={questions}
-          handleCallBackRestartQuiz={handleRestartQuiz}
-        />
-      ) : !quizStarted ? (
-        <IntroSection handleCallBackStartQuiz={handleStartQuiz} />
-      ) : showScore ? (
-        <ScoreSection
-          score={score}
-          timer={timer}
-          totalTime={600}
-          questionLength={questions.length}
-          handleCallBackShowAnswers={setShowAnswers}
-          handleCallBackRestartQuiz={handleRestartQuiz}
-        />
-      ) : (
-        <QuizSection
-          currentQuestion={currentQuestion}
-          questions={questions}
-          timer={timer}
-          handleCallBackAnswerOptionClick={handleAnswerOptionClick}
-        />
-      )}
+    <div>
+      <div className="flex m-auto flex-col p-6 gap-5 bg-primary-800 rounded-lg z-10 sm:w-400 w-full mb-4">
+        {showAnswers ? (
+          <AnswerSection
+            questions={questions}
+            handleCallBackRestartQuiz={handleRestartQuiz}
+          />
+        ) : !quizStarted ? (
+          <IntroSection handleCallBackStartQuiz={handleStartQuiz} />
+        ) : showScore ? (
+          <ScoreSection
+            score={score}
+            timer={timer}
+            totalTime={600}
+            questionLength={questions.length}
+            handleCallBackShowAnswers={setShowAnswers}
+            handleCallBackRestartQuiz={handleRestartQuiz}
+          />
+        ) : (
+          <QuizSection
+            currentQuestion={currentQuestion}
+            questions={questions}
+            timer={timer}
+            handleCallBackAnswerOptionClick={handleAnswerOptionClick}
+          />
+        )}
+      </div>
+      <SocialSection />
     </div>
   );
 }
