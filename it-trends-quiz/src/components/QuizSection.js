@@ -13,7 +13,10 @@ const QuizSection = (props) => {
           <span>
             Frage {currentQuestion + 1}/{questions.length}
           </span>
-          <span className="ml-4 select-none">Verbleibende Zeit: {timer}</span>
+          <span className="ml-4 select-none">
+            Verbleibende Zeit:{" "}
+            {new Date(timer * 1000).toISOString().substr(14, 5)} Minuten
+          </span>
         </div>
         <div className="text-red-400 flex-wrap select-none">
           {questions[currentQuestion].questionText}

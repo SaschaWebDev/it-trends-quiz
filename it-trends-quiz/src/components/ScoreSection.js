@@ -3,6 +3,8 @@ import React from "react";
 const ScoreSection = (props) => {
   let {
     score,
+    timer,
+    totalTime,
     questionLength,
     handleCallBackShowAnswers,
     handleCallBackRestartQuiz,
@@ -13,13 +15,15 @@ const ScoreSection = (props) => {
         Ergebnis
       </span>
       <div className="text-md font-medium select-none">
-        {score} / {questionLength} richtige Antworten in xxx
+        {score} / {questionLength} richtige Antworten in{" "}
+        {new Date((totalTime - timer) * 1000).toISOString().substr(14, 5)}{" "}
+        Minuten
       </div>
       <div className="text-md font-medium select-none">
         {score < 8 ? (
           <div>
             <span className="text-red-500 select-none">
-              Ergebnis unter 50%. Leider nicht bestanden.
+              Ergebnis unter 50 %. Leider nicht bestanden.
             </span>
             <br />
             <span className="text-red-500 select-none">
@@ -40,7 +44,7 @@ const ScoreSection = (props) => {
         ) : score >= 8 && score < 10 ? (
           <div>
             <span className="text-yellow-500 select-none">
-              Ergebnis 50-60% und somit ausreichend.
+              Ergebnis 50-60 % und somit ausreichend.
             </span>
             <br />
             <span className="text-yellow-500 select-none">
@@ -61,7 +65,7 @@ const ScoreSection = (props) => {
         ) : score >= 10 && score <= 12 ? (
           <div>
             <span className="text-yellow-500 select-none">
-              Ergebnis über 60-80% und somit befriedigend.
+              Ergebnis über 60-80 % und somit befriedigend.
             </span>
             <br />
             <span className="text-yellow-500 select-none">
@@ -82,7 +86,7 @@ const ScoreSection = (props) => {
         ) : score > 12 && score <= 14 ? (
           <div>
             <span className="text-green-500 select-none">
-              Ergebnis über 80%-90% und somit gut.
+              Ergebnis über 80 %-90 % und somit gut.
             </span>
             <br />
             <span className="text-green-500 select-none">

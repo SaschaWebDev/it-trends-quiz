@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import questions from "./questions";
 import IntroSection from "./components/IntroSection";
@@ -41,6 +41,14 @@ export default function App() {
     setTimer(600);
   };
 
+  useEffect(() => {
+    if (quizStarted && !showScore && !showAnswers && timer > 0) {
+      setTimeout(() => {
+        setTimer(timer - 1);
+      }, 1000);
+    }
+  });
+
   return (
     <div className="flex m-auto flex-col p-6 gap-5 bg-primary-800 rounded-lg z-10 sm:w-400 w-full mb-4">
       {showAnswers ? (
@@ -53,6 +61,8 @@ export default function App() {
       ) : showScore ? (
         <ScoreSection
           score={score}
+          timer={timer}
+          totalTime={600}
           questionLength={questions.length}
           handleCallBackShowAnswers={setShowAnswers}
           handleCallBackRestartQuiz={handleRestartQuiz}
