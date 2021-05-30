@@ -42,9 +42,12 @@ export default function App() {
   };
 
   return (
-    <div className="flex m-auto flex-col p-6 gap-5 bg-primary-800 rounded-lg z-10 sm:w-400 w-full">
+    <div className="flex m-auto flex-col p-6 gap-5 bg-primary-800 rounded-lg z-10 sm:w-400 w-full mb-4">
       {showAnswers ? (
-        <AnswerSection handleCallBackRestartQuiz={handleRestartQuiz} />
+        <AnswerSection
+          questions={questions}
+          handleCallBackRestartQuiz={handleRestartQuiz}
+        />
       ) : !quizStarted ? (
         <IntroSection handleCallBackStartQuiz={handleStartQuiz} />
       ) : showScore ? (
